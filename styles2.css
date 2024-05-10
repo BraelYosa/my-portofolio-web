@@ -1,0 +1,299 @@
+/* Default */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+#background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* Ensure video stays behind other content */
+    object-fit: cover; /* Cover entire container */
+    filter: brightness(95%);
+    transition: transform 0.3s;
+}
+
+.welcome{
+    position: fixed;
+    color: white;
+    font-size: x-large;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-left: 1%;
+    margin-top: 1%;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+}
+
+.about-web{
+    position: fixed;
+    left: 1%;
+    top: 6%;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: small; /* Adjust the size as needed */
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2; 
+}
+
+button {
+    padding: 10px 20px;
+    background-color:  rgb(0, 106, 255);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: rgb(0, 89, 255);
+}
+
+.custom-crusor{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 103%;
+    height: 80%;
+    cursor: url('kh-crusor.png'), auto;
+}
+
+/* Jar and paper */
+.jar {
+    position: fixed;
+    width: 90px; /* Adjust the width as needed */
+    height: 60px; /* Adjust the height as needed */
+    left: 69.8%;
+    top: 44.8%;
+    z-index: 5;
+    cursor: pointer;
+    transition: filter 0.3s; /* Add transition for smooth effect */
+    filter: grayscale(100%); /* Set initial filter to grayscale */
+}
+
+.jar:hover {
+    filter: none; /* Remove grayscale filter on hover */
+}
+
+.grayscale {
+    filter: grayscale(100%); /* Set initial filter to grayscale */
+}
+
+.color {
+    filter: none; /* Remove grayscale filter */
+}
+
+.about-page-paper {
+    position: absolute;
+    scale: 70%;
+    right: -15%;
+    bottom: -80%;
+    display: none; /* Hide the image by default */
+    position: absolute;
+    z-index: 5;
+    /* Add other styles as needed */
+}
+
+/* Click Effect */
+div.clickEffect{
+    position:fixed;
+    box-sizing:border-box;
+    border-style:solid;
+    border-color:#FFFFFF;
+    border-radius:50%;
+    animation:clickEffect 0.4s ease-out;
+    z-index:99999;
+    }
+
+    @keyframes clickEffect{
+    0%{
+    opacity:1;
+    width:0.5em; height:0.5em;
+    margin:-0.25em;
+    border-width:0.5em;
+    }
+    100%{
+    opacity:0.2;
+    width:15em; height:15em;
+    margin:-7.5em;
+    border-width:0.03em;
+    }
+    }
+
+.Copyrighted{
+    position: absolute;
+    top: 132%;
+}
+
+/* audio */
+#playText, #playText-phone {
+    position: fixed;
+    top: 75%;
+    left: 78%;
+    padding: 10px;
+    background-color: transparent;
+    color: white;
+    border-radius: 100px;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    z-index: 5;
+    transition: text-shadow 0.3s ease;
+}
+
+
+#playText-phone{
+    display: none;
+}
+
+.glow {
+    /* Define your glow effect */
+    text-shadow: 0 0 10px #ff7f00, 0 0 20px #ff7f00, 0 0 30px #ff7f00;
+    /* Add transition properties for smooth transition */
+    transition: text-shadow 0.5s ease-in-out;
+}
+
+/* Styles for Poco / Xiaomi phones */
+@media only screen and (max-width: 163.30px) and (max-height: 75.90px) {
+    /* Cooming Soon */
+}
+
+/* Samsung Galaxy S8+ */
+@media only screen and (max-width: 360px) and (max-height: 740px) {
+
+    .about-web{
+        font-size: xx-small;
+    }
+
+    .jar {
+        position: fixed;
+        transform: translateY(-10px);
+    }
+
+    .about-page-paper {
+        position: absolute;
+        scale: -10%;
+        left: -232%;
+        transform: translateY(910px);
+        display: none; /* Hide the image by default */
+        position: absolute;
+        z-index: 5;
+    }
+}
+
+@media only screen and (max-width: 390px) and (max-height: 844px) {
+
+    .jar {
+        position: fixed;
+        width: 90px; /* Adjust the width as needed */
+        height: 60px; /* Adjust the height as needed */
+        left: 80%;
+        transform: translateY(-5px);
+        z-index: 5;
+        cursor: pointer;
+        transition: filter 0.3s; /* Add transition for smooth effect */
+        filter: grayscale(100%); /* Set initial filter to grayscale */
+    }
+
+    .about-page-paper {
+        position: absolute;
+        scale: -10%;
+        left: -205%;
+        transform: translateY(500px);
+        display: none; /* Hide the image by default */
+        position: absolute;
+        z-index: 5;
+    }
+
+}
+
+@media only screen and (max-width: 430px) and (max-height: 932px) {
+    /* Add your styles for iPhone 14 here */
+    .about-web{
+        font-size: xx-small;
+    }
+
+    #playText{
+        display: none;
+    }
+
+    #playText-phone{
+        transform: translateY(-35px);
+        font-size: x-small;
+        width: 30%;
+        left: 71%;
+        display: block;
+    }
+
+    .jar {
+        position: fixed;
+        width: 90px; /* Adjust the width as needed */
+        height: 60px; /* Adjust the height as needed */
+        left: 80%;
+        top: 45%;
+        z-index: 5;
+        cursor: pointer;
+        transition: filter 0.3s; /* Add transition for smooth effect */
+        filter: grayscale(100%); /* Set initial filter to grayscale */
+    }
+
+    .about-page-paper {
+        position: absolute;
+        scale: 25%;
+        right: -170%;
+        bottom: -50%;
+        display: none; /* Hide the image by default */
+        position: absolute;
+        z-index: 5;
+        /* Add other styles as needed */
+    }
+}
+
+/* Styles for Samsung Galaxy Tablet S9 */
+@media only screen and (max-width: 254.3px) and (max-height: 156.8px) {
+    /* Cooming Soon */
+}
+
+/* Styles for Desktop */
+/* @media only screen and (max-width: 1920px) and (max-height: 1080px) {
+
+    .jar {
+        position: fixed;
+        width: 117px; 
+        height: 85px; 
+        left: 70%;
+        top: 44.5%;
+        z-index: 5;
+        cursor: pointer;
+        transition: filter 0.3s; 
+        filter: grayscale(100%); 
+    }
+
+    #playText{
+        left: 81%;
+        top: 78%;
+    }
+
+    .about-page-paper {
+        position: absolute;
+        scale: 70%;
+        right: 0%;
+        bottom: -38%;
+        display: none; 
+        position: absolute;
+        z-index: 5;
+    }
+}  */

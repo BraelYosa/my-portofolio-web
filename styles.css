@@ -1,0 +1,1062 @@
+/* Default */
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 10px;
+    background-color: black;
+    color: white;
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    overflow-x: hidden;
+    position: relative;
+}
+
+#playButton {
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    position: relative;
+}
+
+#playButton::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+#playButton.active::before,
+#playButton:hover::before {
+    width: 100%;
+    left: 0;
+}
+
+#playButton:hover {
+    animation: glow-bright 20s infinite alternate;
+}
+
+#video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensure video stays behind other content */
+    object-fit: cover; /* Cover entire container */
+    filter: brightness(95%);
+    transition: transform 0.3s;
+}
+
+#background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* Ensure video stays behind other content */
+    object-fit: cover; /* Cover entire container */
+    filter: brightness(95%);
+    transition: transform 0.3s;
+}
+
+header{
+    z-index: 2;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+h1{
+    color:white;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+    z-index: 2;
+    position: relative;
+}
+
+@keyframes glow {
+    from{
+        text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+        opacity: 1;
+    }
+    to{
+        text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.9);
+        opacity: 0.6;
+    }
+}
+
+p{
+    font-style:normal;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    position: relative;
+}
+
+.welcome{
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+}
+
+.portofolio-topic{
+    position: fixed;
+    bottom: 47%;
+    left: 52%;
+    z-index: 0;
+}
+
+h2 {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    position: relative;
+}
+
+.image-container img{
+    z-index: 2;
+    position: relative;
+    width: 25%;
+    float: left;
+    margin: 0 10px 10px 0;
+    overflow: hidden;
+}
+
+button {
+    position: relative;
+    padding: 10px;
+    background-color: silver;
+    color: black;
+    border: none;
+    cursor: pointer;
+    z-index: 3;
+}
+
+footer, p2{
+    font-size: small;
+    font-style: italic;
+}
+
+.also-known-as {
+ font-size: small;
+ z-index: 2;
+ position: relative;
+}
+
+em{
+    font-size: x-large;
+    animation: glow 2s infinite alternate;
+    margin-left: 3px;
+}
+
+#brandon-zenz{
+    position: relative;
+    z-index: 3;
+}
+
+#brandon-zenz:hover {
+    position: relative;
+    animation: glow-bright 5s infinite alternate;
+    cursor: pointer;
+    z-index: 3;
+}
+
+@keyframes glow-bright{
+    from{
+        text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+        opacity: 1;
+    }
+
+    to{
+        text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.9);
+        opacity: 0.5;
+    }
+}
+
+#profile-info-box {
+    position: fixed;
+    top: 20px;
+    right: 0px;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    border: 2px solid white;
+    transition: transform 0.7s ease-in-out;
+    transform: translateX(100%);
+    z-index: 3;
+}
+
+#profile-info-box img{
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.brandon-zenzimg {
+    border-radius: 50%;
+    border: 1px solid white;
+}
+
+.newest-release{
+    color: white;
+    position: absolute;
+    left: 23%;
+    bottom: 75%;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+}
+
+.newest-cover{
+    color: white;
+    position: absolute;
+    left: 66%;
+    bottom: 75%;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+}
+
+.image-newsong{
+position: absolute;
+left: 28%;
+top: 20%;
+}
+
+.image-newcover {
+    position: absolute;
+    left: 71%;
+    top: 22%;
+}
+
+.image-newsong,
+.image-newcover {
+    opacity: 0.6; /* Set initial opacity */
+    transition: opacity 0.5s, transform 0.5s; /* Add transition for opacity and transform */
+    transform: scale(0.9); /* Set initial scale */
+}
+
+.image-newsong:hover,
+.image-newcover:hover {
+    opacity: 1; /* Change opacity on hover */
+    transform: scale(1); /* Change scale on hover */
+}
+
+.my-other{
+    margin-bottom: -2%;
+}
+
+.box-addons{
+    position: absolute;
+    bottom: -230px;
+    background-color: #151F30;
+    width:100%; 
+    height:300px;
+    z-index: 1;
+    border: 2px solid white;
+}
+
+.skill-pics{
+    position: absolute;
+    width: 34px; /* Set the width of the image */
+    height: auto; /* Maintain aspect ratio */
+    left: 13%;
+    bottom: 88%;
+}
+
+.education-pics{
+    position: absolute;
+    width: 30px; /* Set the width of the image */
+    height: auto; /* Maintain aspect ratio */
+    left: 25%;
+    bottom: 86%;
+    z-index: 5;
+}
+
+.educ-topic-iphone{
+    display: none;
+}
+
+.exp-pics{
+    position: absolute;
+    width: 20px; /* Set the width of the image */
+    height: auto; /* Maintain aspect ratio */
+    left: 64%;
+    bottom: 89%;
+    z-index: 4;
+}
+
+iframe{
+    position: absolute;
+    bottom: -4px;
+    z-index: 4;
+    background-color: transparent;
+    display: none;
+}
+
+.bongo2{
+    display: none;
+}
+
+.bongo-vid{
+    height: 40%;
+    width: 40%;
+    position: absolute;
+    bottom: 58%;
+    left: 69%;
+    z-index: 10;
+}
+
+.custom-crusor{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 103%;
+    height: 80%;
+    cursor: url('kh-crusor.png'), auto;
+}
+
+/* Toggle button styles */
+.toggleBackgroundButton {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: box-shadow 0.3s; /* Add transition effect for box-shadow */
+}
+
+.toggleBackgroundButton:hover {
+    /* Add glowing effect using box-shadow */
+    box-shadow: 0 0 10px 3px rgba(255, 255, 255, 0.5);
+}
+
+.hidden{
+    display: none;
+}
+
+.blur-fade-out {
+    filter: blur(5px);
+    opacity: 0;
+    transition: filter 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.blur {
+    filter: blur(5px);
+    transition: filter 0.5s ease-out;
+}
+
+.blur:hover {
+    filter: blur(0); /* Remove the blur effect on hover */
+}
+
+/* Click Effect */
+div.clickEffect{
+    position:fixed;
+    box-sizing:border-box;
+    border-style:solid;
+    border-color:#FFFFFF;
+    border-radius:50%;
+    animation:clickEffect 0.4s ease-out;
+    z-index:99999;
+    }
+
+    @keyframes clickEffect{
+    0%{
+    opacity:1;
+    width:0.5em; height:0.5em;
+    margin:-0.25em;
+    border-width:0.5em;
+    }
+    100%{
+    opacity:0.2;
+    width:15em; height:15em;
+    margin:-7.5em;
+    border-width:0.03em;
+    }
+    }
+
+.Copyrighted{
+    position: absolute;
+    top: 132%;
+}
+
+/* Graph */
+.semester {
+    transition: opacity 0.3s ease-in-out; /* Add opacity transition */
+}
+
+.text-container:hover .semester {
+    opacity: 0; /* Hide the semester text on hover */
+}
+
+.graph-container {
+    position: relative;
+    width: 50%;
+    height: 100%;
+}
+
+.text-container {
+    position: relative;
+    cursor: pointer;
+    width: 50% ;
+    z-index: 5;
+}
+
+.graph {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    width: 0;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: flex-start;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, width 0.5s ease-in-out; /* Add transition for width */
+}
+
+.text-container:hover .graph {
+    opacity: 1;
+    width: 100%; /* Expand the width on hover */
+    transform: scaleX(1); /* Ensure the bars expand horizontally */
+}
+
+.bar {
+    background-color: #007bff; /* Set the color of the bars */
+    height: 100%; /* Set the height of the bars */
+}
+
+.gpa-text {
+    transition: opacity 1.3s ease-in-out;
+    position: relative;
+    top: 0px;
+    left: 5px;
+    color: white;
+    opacity: 0; /* Initially hide the text */
+    display: inline-flex; /* Ensure the text stays on the same line */
+    align-items: center; /* Vertically center text */
+}
+
+.text-container:hover .gpa-text {
+    opacity: 1; /* Show the text on hover */
+}
+
+.graph.frozen {
+    opacity: 1; /* Keep the frozen graph visible */
+    width: 100%; /* Keep the width expanded */
+}
+
+.text-container:hover .graph {
+    opacity: 1;
+    width: 100%; /* Expand the width on hover */
+    transform: scaleX(1); /* Ensure the bars expand horizontally */
+}
+
+/* Skill & Inspiration Box */
+.indent {
+    text-indent: 20px;
+    font-family: Arial, sans-serif; /* Change the font family */
+    font-size: 12px; /* Decrease the font size */
+}
+
+.box-description {
+    background-color: #151F30;
+    position: absolute;
+    bottom: -3px;
+    left: 28%;
+    padding-top: 1px; /* Space / enter with the above edge of the box */
+    width: 50%; /* Decrease the width */
+    max-width: 420px; /* Set a maximum width if needed */
+    height: 300px; /* Decrease the height */
+    border: 1px solid white;
+    z-index: 5;
+    transition: all 0.7s ease-in-out; /* Add transition for all properties */
+    overflow: hidden; /* Hide overflow content */
+    cursor: pointer; /* Change cursor on hover */
+}
+
+.box-description:hover {
+   box-shadow: 0 0 10px 2px white; /* Add a glowing effect when hovering */
+}
+
+.expanded .skill-text {
+    visibility: visible; /* Initially visible */
+    transition: visibility 0.2s ease-in-out; /* Add transition for visibility */
+    visibility: hidden; /* Hide when expanded */
+}
+
+.expanded {
+    max-width: 800px; /* Expand width */
+    background-color: white; /* Change background color */
+    transition: all 0.8s ease-in-out; /* Add transition for all properties */
+    overflow: visible; /* Show overflow content */
+    z-index: 5;
+}
+
+/* Skill & Inspiration Box */
+.inspiration {
+    visibility: hidden; /* Initially hide the inspiration content */
+    opacity: 0; /* Initially set opacity to 0 */
+    transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Add transition for visibility and opacity */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.expanded .inspiration {
+    display: block;
+    visibility: visible; /* Show the inspiration section when box is expanded */
+    opacity: 1; /* Set opacity to 1 for fade-in effect */
+    transition: all 4s ease-in-out; /* Add transition effect */
+}
+
+.inspiration p {
+    color: black; /* Set text color to black */
+    font-size: 14px; /* Set font size */
+    transition: all 10s ease-in-out; /* Add transition effect */
+    line-height: 1.5; /* Add space between lines */
+    display: inline-block;
+}
+
+.inspiration li {
+    color: black; /* Set list item text color to black */
+    font-size: 14px; /* Set font size */
+    transition: all 10s ease-in-out; /* Add transition effect */
+    display: inline-block;
+    width: 100%;
+}
+
+.inspiration ul{
+    line-height: 1.5; /* Add space between lines */
+}
+
+.inspiration img {
+    position: relative; /* Position the image absolutely within the parent container */
+    left: 70%;
+    max-width: 300px; /* Set the maximum width */
+    max-height: 150px; /* Set the maximum height */
+    opacity: 0; /* Initially hide the image */
+    transition: opacity 4s ease-in-out; /* Add transition for opacity */
+    display: inline-block;
+}
+
+.expanded .inspiration img { 
+    opacity: 1; /* Set opacity to 1 for fade-in effect */
+    display: inline-block;
+}
+
+/* Experience */
+.exp-title{
+    font-size: 14px;
+    margin-bottom: 5px; 
+}
+
+.experience {
+    background-color: #151F30;
+    position: absolute;
+    bottom: 8px;
+    left: 58.1%;
+    padding-top: 1px; /* Space / enter with the above edge of the box */
+    width: 21%; /* Decrease the width */
+    max-width: 420px; /* Set a maximum width if needed */
+    height: 290px; /* Decrease the height */
+    z-index: 4;
+    margin-top: 20px; /* Adjust spacing as needed */
+    font-family: Arial, sans-serif; /* Change the font family */
+    font-size: 10px; /* Decrease the font size */
+}
+
+.job {
+    margin-bottom: 20px; /* Adjust spacing between jobs */
+}
+
+.job-title {
+    font-weight: bold;
+    margin-bottom: 5px; /* Adjust spacing between job title and details */
+}
+
+.job-details {
+    margin-bottom: 5px; /* Adjust spacing between job details */
+}
+
+.contact-and-information{
+    background-color: transparent;
+    position: absolute;
+    bottom: -40px;
+    left: 79%;
+    padding-top: 1px; /* Space / enter with the above edge of the box */
+    width: 21%; /* Decrease the width */
+    max-width: 400px; /* Set a maximum width if needed */
+    height: 200px; /* Decrease the height */
+    z-index: 4;
+    margin-top: 20px; /* Adjust spacing as needed */
+    font-family: Arial, sans-serif; /* Change the font family */
+    font-size: 13px; /* Decrease the font size */
+    text-align: center;
+}
+
+.detail-contact-and-information-topic{
+    right: 2%;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.last-updated{
+    left: 25%;
+    font: italic;
+    bottom: -20px;
+    font-size: 9px; /* Decrease the font size */
+}
+
+/* Image Shadow */
+.toggle-images:hover {
+    position: relative;
+    cursor: pointer;
+    z-index: 3;
+    animation: glow-bright 5s infinite alternate;
+}
+
+.image-container.hide-images {
+    display: none;
+}
+
+.image-container:not(.hide-images) img {
+    opacity: 1; /* Show images when the hide-images class is not present */
+}
+
+.image-container img {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out, opacity 0.5s ease-in-out; /* Add transition for smooth scaling */
+    transform: scale(0.2); /* Start with small size */
+    opacity: 0;
+    cursor: pointer;
+}
+
+.image-container img:hover {
+    transform: scale(1); /* Scale up to normal size on hover */
+    opacity: 1;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease-in-out; 
+}
+
+.image-wrapper {
+    position: relative;
+    text-align: center;
+    margin-right: -2000px; 
+}
+
+.image-wrapper .caption,
+.image-wrapper .caption2 {
+    position: absolute;
+    top: -10%;
+    left: -100%; /* Initial position outside the container */
+    transform: translateY(-50%);
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s ease-in-out, left 0.8s ease-in-out; /* Transition for sliding effect */
+}
+
+.image-wrapper:hover .caption,
+.image-wrapper.clicked .caption{
+    left: 20%; /* Slide in to the left */
+    opacity: 1;
+}
+
+.image-wrapper:hover .caption2,
+.image-wrapper.clicked .caption2{
+    left: 22%;
+    opacity: 1;
+}
+
+    .image-wrapper.clicked img {
+        transform: scale(1); /* Scale up to normal size when clicked */
+    }
+
+/* Cold Redirect */
+.cold-text {
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    z-index: 5;
+    left: 1%;
+    top: 83%;
+    opacity: 0.9;
+}
+
+.hide{
+    opacity: 0;
+    visibility: hidden; /* Hide the element */
+}
+
+.cold-text.button {
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.glow {
+    animation: glow-animation 1.5s infinite alternate;
+}
+
+@keyframes glow-animation {
+    from {
+        text-shadow: 0 0 10px #007bff, 0 0 20px #007bff, 0 0 30px #007bff;
+        opacity: 1;
+    }
+    
+    to {
+        text-shadow: 0 0 30px #009bff, 0 0 40px #009bff, 0 0 50px #009bff;
+        opacity: 0.8;
+    }
+}
+
+/* My Portofolio */
+.portofolio-topic {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out; /* Add a transition for opacity */
+}
+
+.portofolio-topic.hide {
+    transition: opacity 0.1s ease-in-out;
+    opacity: 0; /* Fade out when hidden */
+    pointer-events: none; /* Disable pointer events when hidden */
+}
+
+/* Styles for Poco / Xiaomi phones */
+@media only screen and (max-width: 163.30px) and (max-height: 75.90px) {
+    /* Cooming Soon */
+}
+
+/* Styles for iPhone 14 (Pro max) or closer to it */
+@media only screen and (max-width: 430px) and (max-height: 932px) {
+
+    .main-name{
+        font-size: small;
+    }
+
+    .also-known-as {
+        font-size: xx-small;
+        z-index: 2;
+        position: relative;
+       }
+
+       #brandon-zenz{
+        font-size: small;
+        position: relative;
+        z-index: 3;
+    }
+
+    .welcome{
+        font-size: xx-small;
+    }
+
+    .portofolio-topic{
+        font-size: small;
+    }
+
+    .my-other{
+        font-size: small;
+    }
+
+    .newest-release, .newest-cover{
+        font-size: x-small;
+    }
+
+    .brandon-zenzimg{
+        max-width: 80px;
+        max-height: 80px;
+        width: auto;
+        height: auto;
+    }
+
+    .image-newsong, .image-newcover{
+        top: 26%;
+        max-width: 70px;
+        max-height: 70px;
+        width: 10%; /* Takes up 50% of the parent container's width */
+        height: auto;
+        opacity: 100%;
+    }
+
+    #profile-info-box {
+        position: fixed;
+        top: 120px;
+        right: 0px;
+        background-color: black;
+        color: white;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+        border: 2px solid white;
+        transition: transform 0.7s ease-in-out;
+        transform: translateX(100%);
+        z-index: 3;
+    }
+
+    .educ-topic{
+        display: none;
+    }
+
+    .educ-topic-iphone{
+        display: block;
+        left: 1%;
+        text-align: justify;
+        width: 30%;
+        font-size: 8px;
+    }
+
+    .indent {
+        font-size: 6px;
+    }
+
+    .inspiration {
+        visibility: hidden; /* Initially hide the inspiration content */
+        opacity: 0; /* Initially set opacity to 0 */
+        transition: visibility 0s ease-in-out, opacity 0s ease-in-out; /* Add transition for visibility and opacity */
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute; 
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+    }
+
+    .inspiration ul{
+        line-height: 2; /* Add space between lines */
+        transform: translateY(-115px); 
+    }
+
+    .inspiration p {
+        color: black; /* Set text color to black */
+        font-size: 14px; /* Set font size */
+        transition: all 0s ease-in-out; /* Add transition effect */
+        line-height: 1.5; /* Add space between lines */
+        display: inline-block;
+    }
+
+    .inspiration li {
+        color: black; /* Set list item text color to black */
+        font-size: 14px; /* Set font size */
+        transition: all 0s ease-in-out; /* Add transition effect */
+        width: 150%;
+    }
+
+    .expanded .inspiration {
+        display: block;
+        visibility: visible; /* Show the inspiration section when box is expanded */
+        opacity: 1; /* Set opacity to 1 for fade-in effect */
+        transition: all 0s ease-in-out; /* Add transition effect */
+    }
+
+    .what-insp, .what-insp-desc{
+        font-size: xx-small;
+    }
+
+    .expanded .what-insp{
+        transform: translateY(-100px); 
+        font-size: xx-small;
+        max-width: 100%;
+    }
+
+    .expanded .what-insp-desc{
+        font-size: 5.7px;
+        transform: translateX(-35px);
+    }
+
+    .what-insp-pic{
+        transform: translateX(-50);
+        max-width: 0px;
+        max-height: 0px;
+        display: block;
+        opacity: 0;
+    }
+
+    .expanded .what-insp-pic{
+        top: 30px;
+        transform: translateX(-100px);
+        max-width: 0%;
+        max-height: 0%;
+        opacity: 1;
+    }
+
+    .semester{
+        font-size: xx-small;
+    }
+
+    .gpa-text{
+        font-size: 7px;
+    }
+
+    .education-pics{
+        top: 70%;
+        left: 10%;
+    }
+
+    .skill-pics{
+        top: 67%;
+        left: 40%;
+    }
+
+    .skill-topic{
+        font-size: xx-small;
+    }
+
+    .contact-and-information{
+        bottom: 30%;
+        font-size: 5px;
+    }
+
+    .Copyrighted{
+        font-size: x-small;
+        top: 129.5%;
+    }
+    
+    .last-updated{
+        top: 113%;
+        transform: translateX(-20px);
+        font-size: 5px;
+    }
+
+    .experience{
+    display: none;
+    }
+
+    .bongo2{
+        max-width: 20%;
+        display: block;
+        top: 63%;
+        left: 80%;
+        z-index: 5;
+    }
+
+    .image-wrapper {
+        position: relative;
+        text-align: center;
+        margin-right: -400px; 
+    }
+
+    .image-wrapper:hover .caption,
+    .image-wrapper.clicked .caption{
+    left: 30%; /* Slide in to the left */
+    opacity: 1;
+    }
+
+    .image-wrapper .caption2 {
+        position: absolute;
+        top: 130%;
+        left: -100%; /* Initial position outside the container */
+        transform: translateY(-50%);
+        opacity: 0; /* Initially hidden */
+        transition: opacity 0.5s ease-in-out, left 0.8s ease-in-out; /* Transition for sliding effect */
+    }
+
+    .image-wrapper:hover .caption2,
+    .image-wrapper.clicked .caption2{
+    top: 130%;
+    left: 28%;
+    opacity: 1; 
+    }
+
+    .image-container{
+        max-width: 5%;
+    }
+
+    .image-container img{
+        z-index: 2;
+        position: relative;
+        width: 25%;
+        float: left;
+        margin: 0 10px 10px 0;
+        overflow: hidden;
+    }
+
+    .image-work{
+        right: 2.5%;
+        bottom: -70px;
+    }
+
+    .box-description {
+        bottom: -2px;
+    }
+
+    .bongo-vid{
+    bottom: 17%;
+    left: 80%;
+    width: 20%;
+    height: 20%;
+    }
+    
+}
+
+/* Styles for Samsung Galaxy S8+ */
+@media only screen and (max-width: 360px) and (max-height: 740px) {
+
+    .contact-and-information{
+        bottom: 32%;
+        font-size: 6px;
+    }
+
+    .last-updated{
+        left: 0%;
+        font: italic;
+        transform: translateY(-10px);
+        font-size: 4px; /* Decrease the font size */
+    }
+
+    #playButton {
+        font-size: 15px;
+    }
+
+}
+
+/* Styles for Samsung Galaxy Tablet S9 */
+@media only screen and (max-width: 254.3px) and (max-height: 156.8px) {
+    /* Cooming Soon */
+}
+
+/* Styles for Desktop */
+/* @media only screen and (max-width: 1920px) and (max-height: 1080px) {
+    #profile-info-box {
+        right: 2%;
+    }
+
+    .experience {
+        left: 50.5%;
+    }
+
+    .education-pics{
+        left: 25.5%;
+    }
+
+    .exp-pics{
+        left: 69%;
+    }
+
+    .last-updated{
+        left: 52%;
+    }
+
+    .contact-and-information{
+        left: 74%;
+    }
+} */

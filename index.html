@@ -1,0 +1,199 @@
+<html lang="en">
+
+<audio loop class="audio-bg">
+    <source src="audio/ukiyo-spotify.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+<div id="background-container">
+    <img id="background-image" src="nin-snowPic.png" alt="Background Image">
+    <video id="video-background" loop>
+        <source src="nin-snowFinVid.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+<button id="playButton" onclick="toggleMedia()">Click Me</button>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Brandon Samuel - Personal Profile</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <button class="toggleBackgroundButton" onclick="toggleBackground()">Toggle Background</button>
+
+    <header>
+        <h1 class="main-name"> Brandon Samuel Yosafat <span class="also-known-as"> Also known as <em id="brandon-zenz"> Brandon Zenz </em>
+            </span> </h1>
+    </header>
+
+    <section>
+        <h2 class="welcome">Hi welcome You can, scroll down or press the "2D" text to start seeing more about me </h2>
+        <p id="about-me"></p>
+    </section>
+
+    <section>
+        <h2>Me in <span class="toggle-images" id="toggle-2d"> 2D </span> </h2>
+        <div class="image-container hide-images">
+            <div class="image-wrapper">
+                <p class="caption">Outside Office Me</p>
+                <img class="image-cool" src="Cool Mode On.jpg" alt="Outside Office Me">
+            </div>
+            <div class="image-wrapper">
+                <p class="caption2">Office Me</p>
+                <img class="image-work" src="Work Mode On.jpg" alt="Office Me">
+            </div>
+        </div>
+    </section>    
+
+    <section>
+
+        <h2 class="portofolio-topic"> My Portofolio Website </h2>
+        <p id="Email"></p>
+        <p id="phone-Number"></p>
+
+    </section>
+
+    <div id="cold-text" class="cold-text hide">To Cold?</div>
+
+    <div id="profile-info-box">
+        <img class="brandon-zenzimg" src="Brandon Zenz.jpg" alt="Thi Brandon Zenz">
+        <p class="newest-release"> My Newest song release </p>
+        <a href="https://open.spotify.com/track/07nnBEtcuHNoTMnB71nyU5?si=A4AlEAlKRqW8ziEE69D9zQ">
+            <img class="image-newsong" src="VVB-img.png" alt="newsong img">
+        </a>
+        <p class="newest-cover"> My Newest launchpad cover </p>
+        <a href="https://youtu.be/2qRT41hqfHM?si=cmWvdD6MCPF4Ne6l">
+            <img class="image-newcover" src="launchpad-cover-img.jpg" alt="newcover img">
+        </a>
+        <p class="my-other"> My other side of me that is more focused on Musical story of my life </p>
+    </div>
+    
+
+    <!-- My Desc -->
+    <div class="box-addons">
+
+        <p class="educ-topic"> &nbsp; Education IPK as Binus IS Student : (Avg : 3.52) </p>
+        <p class="educ-topic-iphone"> &nbsp; My last IP : (Avg : 3.52) </p>
+        <div class="graph-container">
+            <div class="text-container" onmouseover="showGraph(1)" onmouseout="hideGraph(1)">
+                <p class="semester"> &nbsp; Semester 1</p>
+                <div class="graph">
+                    <div class="bar" style="width: 30%"></div>
+                    <div class="gpa-text">GPA: 3.33</div>
+                </div>
+            </div>
+            <div class="text-container" onmouseover="showGraph(2)" onmouseout="hideGraph(2)">
+                <p class="semester"> &nbsp; Semester 2</p>
+                <div class="graph">
+                    <div class="bar" style="width: 40%"></div>
+                    <div class="gpa-text">GPA: 3.43</div>
+                </div>
+            </div>
+            <div class="text-container" onmouseover="showGraph(3)" onmouseout="hideGraph(3)">
+                <p class="semester"> &nbsp; Semester 3</p>
+                <div class="graph">
+                    <div class="bar" style="width: 35%"></div>
+                    <div class="gpa-text">GPA: 3.21</div>
+                </div>
+            </div>
+            <div class="text-container" onmouseover="showGraph(4)" onmouseout="hideGraph(4)">
+                <p class="semester"> &nbsp; Semester 4</p>
+                <div class="graph">
+                    <div class="bar" style="width: 45%"></div>
+                    <div class="gpa-text">GPA: 3.25</div>
+                </div>
+            </div>
+            <div class="text-container" onmouseover="showGraph(5)" onmouseout="hideGraph(5)">
+                <p class="semester"> &nbsp; Semester 5</p>
+                <div class="graph">
+                    <div class="bar" style="width: 60%"></div>
+                    <div class="gpa-text">GPA: 3.70</div>
+                </div>
+            </div>
+            <div class="text-container" onmouseover="showGraph(6)" onmouseout="hideGraph(6)">
+                <p class="semester"> &nbsp; Semester 6</p>
+                <div class="graph">
+                    <div class="bar" style="width: 70%"></div>
+                    <div class="gpa-text">GPA: 3.80</div>
+                </div>
+            </div>
+            <div class="text-container" onmouseover="showGraph(7)" onmouseout="hideGraph(7)">
+                <p class="semester"> &nbsp; Semester 7</p>
+                <div class="graph">
+                    <div class="bar" style="width: 75%"></div>
+                    <div class="gpa-text">GPA: 3.82</div>
+                </div>
+            </div>
+        </div>
+
+            <div class="box-description" id="expandable-box">
+                <div class="skill-text">
+                    <p class="skill-topic"> &nbsp; Skills : </p>
+                    <img class="skill-pics" src="skill-pic.png">
+                    <p class="indent skill-item"> Music Making (Fl Studio) </p>
+                    <p class="indent skill-item"> Launchpad Cover (Ableton) </p>
+                    <p class="indent skill-item"> UML Diagrams (Visual Paradigm / Draw.io) </p>
+                    <p class="indent skill-item"> Video Editing (Premiere Pro / After Effects) </p>
+                    <p class="indent skill-item"> Photo Editing (Picsart) </p>
+                    <p class="indent skill-item"> Codings (Golang / HTML / CSS / Java Script / Python) </p>
+                    <p class="indent skill-item"> Database (DBeaver(Postgres)) </p>
+                    <p class="indent skill-item"> API (Postman) </p>
+                </div>
+                <div class="inspiration">
+                    <p class="what-insp"> &nbsp; What Inspires Me : </p>
+                    <ul>
+                        <li class="what-insp-desc"> 1. Change the way you think can make everything enjoyable</li>
+                        <li class="what-insp-desc"> 2. Proverbs 27:17 - "As iron sharpens iron, so one person sharpens another."</li>
+                        <li class="what-insp-desc"> 3. Faith and your love for God can bring miracles</li>
+                    </ul>
+                    <img class="what-insp-pic" src="inspiration-pic.jpg" alt="Inspiration Picture">
+                </div>
+            </div>
+
+            <div class="experience">
+                <p class="exp-title"> Experience : </p>
+                <div class="job">
+                    <p class="job-title">Smoot Motor Electric - 8 Months (INTERNSHIP as SCM Ops)</p>
+                    <p class="job-details">Knowledge Gained: Basic flow of automotive business process</p>
+                    <p class="job-details">Utilities Used: Excel</p>
+                </div>
+                <div class="job">
+                    <p class="job-title">Wide Technologies Indonesia - 8 Months (INTERNSHIP as Software Engineer)</p>
+                    <p class="job-details">Knowledge Gained: Basic Database creation from backend for frontend to access database from the API</p>
+                    <p class="job-details">Utilities Used: Golang, Postman, and Postgres</p>
+                </div>
+            </div>        
+            
+            <div class="contact-and-information">
+                <p class="detail-contact-and-information-topic"> Contact & Information </p>
+                <p class="detail-contact-and-information"> Phone No : 081318310981 </p>
+                <p class="detail-contact-and-information"> Work Email : brandnsyo@gmail.com </p>
+                <p class="detail-contact-and-information"> Insta : brandonznzz </p>
+
+                <p class="last-updated"> This website last updated MAY 2024 </p>
+
+            </div>
+
+        <iframe src="bongo-cat-codes-2jamming/dist/index.html" frameborder="100" width="100%" height="300px"></iframe>
+
+        <!-- logos pics for desc -->
+        <img class="education-pics" src="education-pic.png">
+        <img class="exp-pics" src="exp-pic.png">
+
+        <video class="bongo-vid" src="vids/bongo-vid.mp4" autoplay loop muted></video>
+
+
+    </div>
+
+    <div class="custom-crusor"></div>
+
+    <script src="script.js"></script>
+
+    <footer class="Copyrighted"> &copy; Copyrighted By Brandon 2024 </footer>
+
+</body>
+
+</html>
